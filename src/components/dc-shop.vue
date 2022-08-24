@@ -1,10 +1,13 @@
 <template>
-  
+  <div class="dc-shop">
+      shop
+  </div>
 </template>
 
 <script>
-export default {
 
+export default {
+     name: 'DCshop'
 }
 </script>
 

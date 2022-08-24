@@ -1,10 +1,13 @@
 <template>
-  
+  <div class="dc-footer">
+      Footer
+  </div>
 </template>
 
 <script>
-export default {
 
+export default {
+     name: 'DCfooter'
 }
 </script>
 

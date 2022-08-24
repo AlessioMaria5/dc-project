@@ -28,6 +28,10 @@ export default {
 
 <style lang="scss">
 #app {
+    h1,h2,h3,h4, .nav {
 
+      text-transform: uppercase;
+
+    }
 }
 </style>

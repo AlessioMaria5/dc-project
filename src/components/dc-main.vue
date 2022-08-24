@@ -1,6 +1,6 @@
 <template>
   <div class="dc-main">
-      Main
+    <h2>--> Content goes Here </h2> 
   </div>
 </template>
 
@@ -12,5 +12,11 @@ export default {
 </script>
 
 <style>
+
+.dc-main {
+
+    color:white;
+    background-color: black;
+}
 
 </style>

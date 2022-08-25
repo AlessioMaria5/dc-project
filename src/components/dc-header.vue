@@ -5,7 +5,7 @@
      </div>
      <div class="nav">
          <ul>
-             <li v-for="(link, index) in links" :key="index" :class="link.active=true?'active': '' ">
+             <li v-for="(link, index) in links" :key="index" :class="link.active==ciao?'active': '' ">
              <a :href="link.url" class="upperText">{{link.text}}</a>
              </li>
          </ul>

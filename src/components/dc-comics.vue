@@ -1,7 +1,16 @@
 <template>
   <div class="MyComicsList">
       <h2>Current Series</h2>
-      <div class="DCcList">ciao</div> 
+      <div class="mydc-list">
+          <div class="mydc-inner">
+              <ul>
+                  <li v-for="(mycomic, index) in mycomics" :key="index">
+                      <img :src="mycomic.thumb" alt="">
+                      <h4>{{mycomic.series}}</h4>
+                  </li>
+              </ul>
+          </div>
+      </div> 
   </div>
   
 </template>
@@ -11,7 +20,8 @@ export default {
     name: 'dcComics',
     data() {
 
-        return [
+        return {
+            mycomics: [
   {
     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
     "price": "$19.99",
@@ -85,16 +95,52 @@ export default {
     "type": "graphic novel"
   }
 ]
+        }
+        
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
-.DCclist {
-    background-color: red;
-    height: 500px;
+.mydc-list {
+    background-color: #1A1A1A;
     width:100%;
+    padding:20px;
+
+    .mydc-inner{
+        ul {
+            
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li{
+                
+                
+                list-style: none;
+                width: calc(100% / 6);
+                height: 150px;
+                padding: 10px;
+                margin-bottom: 50px;
+               
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    
+                }
+
+                h4 {
+
+                    color: white;
+                    font-size:10px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
 }
 
 

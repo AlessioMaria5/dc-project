@@ -278,6 +278,7 @@ export default {
 
 <style lang="scss">
 
+
 .footer-nav {
 
     background-image: url('../assets/img/footer-bg.jpg');
@@ -287,6 +288,8 @@ export default {
     display: flex;
     justify-content: space-between;
     color:white;
+
+   
 
       .footer-bg-img {
           
@@ -312,14 +315,14 @@ export default {
 
 .nav-links {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap:20px;
     padding:20px;
 
     ul{
+
         li{
             list-style:none;
+            
 
             a{
                 text-decoration: none;

@@ -80,11 +80,13 @@ export default {
                 display: flex;
                 align-items: center;
                 margin-left: 30px;
+                height: 40px;
 
             img {
 
-                width:30%;
-                height: 50px;
+                
+                height:100%;
+                
             
                 
                 

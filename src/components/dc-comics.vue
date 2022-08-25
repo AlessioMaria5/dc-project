@@ -10,6 +10,9 @@
                   </li>
               </ul>
           </div>
+          <div class="btn-load">
+              <a href="#">LOAD MORE</a>
+          </div>
       </div> 
   </div>
   
@@ -103,10 +106,40 @@ export default {
 
 <style lang="scss">
 
+.MyComicsList {
+
+    position: relative;
+    h2 {
+        padding: 10px 20px;
+        background-color: #0075F7;
+        width:fit-content;
+        position: absolute;
+        top: -40px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    
+    }
+}
+
 .mydc-list {
     background-color: #1A1A1A;
     width:100%;
     padding:20px;
+    margin-top: 20px;
+
+    .btn-load {
+        display:flex;
+        justify-content:center;
+        margin-top: 30px;
+         a {
+
+        padding: 10px 20px;
+        background-color: #0075F7;
+        color: white;
+        text-decoration: none;
+    }
+    }
 
     .mydc-inner{
         ul {

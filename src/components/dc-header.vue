@@ -5,7 +5,7 @@
      </div>
      <div class="nav">
          <ul>
-             <li v-for="(link, index) in links" :key="index" :class="link.active==ciao?'active': '' ">
+             <li v-for="(link, index) in links" :key="index" :class="link.active?'open': '' ">
              <a :href="link.url" class="upperText">{{link.text}}</a>
              </li>
          </ul>
@@ -31,7 +31,7 @@ export default {
                 {
                     text: 'Comics',
                     url: '#',
-                    active: true
+                    active: 'true'
                 },
 
                 {
@@ -89,6 +89,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     .dc-header {
 
         display: flex;
@@ -112,17 +113,10 @@ export default {
                 font-size: 0.6em;
                 
                 li {
-
-
-
                     padding: 0px 10px;
-                    border-bottom: 5px solid;
+                    // border-bottom: rgba(0,0,0,0) 5px solid;
+                    
 
-
-                      .active {
-
-                        border-bottom:  black 5px solid;
-                    }
                     a {
                     text-decoration: none;
                     color: black;
@@ -136,5 +130,13 @@ export default {
                 }
             }
         }
+        .open {
+                    border-bottom: #0067F5 5px solid;
+
+                    a:visited{
+                        color:#0067F5;
+                        
+                    }
+                }
     }
 </style>

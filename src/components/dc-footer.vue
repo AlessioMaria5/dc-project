@@ -1,32 +1,48 @@
 <template>
     <div class="dc-footer">
-      myfooter
         <div class="footer-nav">
             <div class="nav-links">
-                <ul v-for="(link, index) in dccomics" :key="index">
-                    <li><a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a></li>
+                <ul>
+                    <h3>DC COMICS</h3>
+                    <li v-for="(link, index) in dccomics" :key="index">
+                    <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
+                    </li>
                 </ul>
 
-                <ul v-for="(link, index) in shop" :key="index">
-                    <li><a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a></li>
+                <ul>
+                    <h3>SHOP</h3>
+                    <li v-for="(link, index) in shop" :key="index">
+                    <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
+                    </li>
                 </ul>
 
-                <ul v-for="(link, index) in dc" :key="index">
-                    <li><a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a></li>
+                <ul>
+                    <h3>DC</h3>
+                    <li v-for="(link, index) in dc" :key="index">
+                    <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
+                    </li>
                 </ul>
 
-                <ul v-for="(link, index) in sites" :key="index">
-                    <li><a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a></li>
+                <ul>
+                    <h3>SITES</h3>
+                    <li v-for="(link, index) in sites" :key="index">
+                    <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
+                    </li>
                 </ul>
 
             </div>
+            <div class="footer-bg-img">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
         </div>
         <div class="footer-signup">
-            <button>Sign-Up Now!</button>
-            <a href="#">follow us</a>
-                <ul v-for="(link, index) in socialfoot" :key="index">
-                    <li><a :href="link.url">{{link.img}}<img src="link.img" alt=""></a></li>
-                </ul>
+            <a href="#" class="button">Sign-Up Now!</a>
+            <div class="social-icons">
+                <a href="#">follow us</a>
+                    <ul v-for="(link, index) in socialfoot" :key="index">
+                        <li><a :href="link.url"><img :src="link.img" alt=""></a></li>
+                    </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -106,13 +122,13 @@ export default {
                 {
                     text: 'Shop DC',
                     url: '#',
-                    active: false
+                   
                 },
 
                 {
                     text: 'Shop DC collectbles',
                     url: '#',
-                    active: true
+                  
                 },
 
                 
@@ -124,67 +140,67 @@ export default {
                 {
                     text: 'Terms of Use',
                     url: '#',
-                    active: false
+                    
                 },
 
                 {
                     text: 'Privacy policy',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'Ad Choice',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'Adversting',
                     url: '#',
-                    active: true
+                  
                 },
 
                 {
                     text: 'Jobs',
                     url: '#',
-                    active: true
+                 
                 },
 
                 {
                     text: 'Subscriptions',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'Talent Workshops',
                     url: '#',
-                    active: true
+                  
                 },
 
                 {
                     text: 'CPSC Certificates',
                     url: '#',
-                    active: true
+                    
                 },
 
                 {
                     text: 'Ratings',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'Shop Help',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'Contact us',
                     url: '#',
-                    active: true
+                    
                 },
             ],
 
@@ -192,72 +208,67 @@ export default {
                 {
                     text: 'DC',
                     url: '#',
-                    active: false
+                   
                 },
 
                 {
                     text: 'MAD Magazine',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'DC kids',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     text: 'DC Universe',
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
                     
                     text: 'DC Power Visa',
                     url: '#',
-                    active: true
+                  
                 },
 
             ],
 
            socialfoot: [
                 {
-                    img: '../assets/img/footer-facebook',
+                    img: require('../assets/img/footer-facebook.png'),
                     url: '#',
-                    active: false
+                   
                 },
 
                 {
-                    img: '../assets/img/footer-periscope',
+                    img: require('../assets/img/footer-periscope.png'),
                     url: '#',
-                    active: true
+                   
                 },
 
                 {
-                    img: '../assets/img/footer-pinterest',
+                    img: require('../assets/img/footer-pinterest.png'),
                     url: '#',
-                    active: true
+
                 },
 
                 {
-                    img: '../assets/img/footer-twitter',
+                    img: require('../assets/img/footer-twitter.png'),
                     url: '#',
-                    active: true
                 },
 
                 {
                     
-                    img: '../assets/img/footer-youtube',
+                    img: require('../assets/img/footer-youtube.png'),
                     url: '#',
-                    active: true
                 },
 
             ],
-        
-
-        
                 
         }
             
@@ -265,19 +276,99 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 .footer-nav {
 
     background-image: url('../assets/img/footer-bg.jpg');
-    height: 500px;
-    position: relative;
+    background-size: 100%;
     background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    color:white;
+
+      .footer-bg-img {
+          
+          height: 300px;
+          overflow:hidden;
+          padding-right: 100px;
+
+          display: flex;
+          align-items: center;
+          
+
+          img {
+
+            width: 100%;
+            height: 150%; 
+            object-fit: contain;
+            
+           
+      }
+      }
+    
 }
 
 .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding:20px;
+
+    ul{
+        li{
+            list-style:none;
+
+            a{
+                text-decoration: none;
+                color:rgb(161, 161, 161);
+                font-size: 0.6em;
+            }
+        }
+        
+    }
+}
+
+.footer-signup {
 
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2A2A2A;
+
+    a.button {
+
+            border: 2px solid  #0075F7;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px;
+            color: white;
+
+        }
+
+    .social-icons {
+
+        display: flex;
+        align-items: center;
+        gap:20px;
+        margin-right: 50px;
+
+        a {
+
+            color: #0075F7;
+            text-decoration: none;
+            text-transform: uppercase;
+
+        }
+
+        li {
+
+            list-style:none;
+        }
+    }
 }
+
 </style>

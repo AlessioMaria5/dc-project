@@ -27,6 +27,13 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
 #app {
     h1,h2,h3,h4, .nav {
 

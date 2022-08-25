@@ -4,14 +4,18 @@
          <img src="../assets/img/dc-logo.png" alt="DC Comics Logo">
      </div>
      <div class="nav">
-         <ul v-for="(link, index) in links" :key="index">
-             <li><a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a></li>
+         <ul>
+             <li v-for="(link, index) in links" :key="index" :class="link.active=true?'active': '' ">
+             <a :href="link.url" class="upperText">{{link.text}}</a>
+             </li>
          </ul>
      </div>
  </div>
 </template>
 
 <script>
+
+
 export default {
 
     name: 'DCheader',
@@ -85,5 +89,52 @@ export default {
 </script>
 
 <style lang="scss">
+    .dc-header {
 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 70px;
+
+        .head-logo img {
+
+            width: 60%;
+            padding: 10px 0px;
+            
+        }
+
+        .nav {
+
+            ul {
+
+                display: flex;
+                list-style: none;
+                font-size: 0.6em;
+                
+                li {
+
+
+
+                    padding: 0px 10px;
+                    border-bottom: 5px solid;
+
+
+                      .active {
+
+                        border-bottom:  black 5px solid;
+                    }
+                    a {
+                    text-decoration: none;
+                    color: black;
+                    line-height: 90px;
+                    padding: 10px 0px;
+                    
+
+
+                }
+
+                }
+            }
+        }
+    }
 </style>

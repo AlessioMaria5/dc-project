@@ -7,15 +7,15 @@
                     <li v-for="(link, index) in dccomics" :key="index">
                     <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
                     </li>
-                </ul>
 
-                <ul>
+                    <ul class="inner-ul">
                     <h3>SHOP</h3>
                     <li v-for="(link, index) in shop" :key="index">
                     <a :href="link.url" :class ="link.active = true?'active':''" class="upperText">{{link.text}}</a>
                     </li>
                 </ul>
 
+                </ul>
                 <ul>
                     <h3>DC</h3>
                     <li v-for="(link, index) in dc" :key="index">
@@ -320,6 +320,11 @@ export default {
 
     ul{
 
+         .inner-ul h3 {
+
+        margin-top: 10px;
+    }
+
         li{
             list-style:none;
             
@@ -372,6 +377,7 @@ export default {
             list-style:none;
         }
     }
+
 }
 
 </style>
